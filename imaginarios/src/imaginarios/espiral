@@ -1,0 +1,46 @@
+public void espiral(){
+        if((float)(columnas%2)==1){
+            for(int i=0;i<(columnas/2);i++){
+            //System.out.println("\n1");
+            for(int j=i;j<columnas-i;j++){
+                System.out.print("["+mat[i][j]+"]");
+            }
+            //System.out.println("\n2");
+            for(int j=i+1;j<filas-i;j++){
+                System.out.print("["+mat[j][columnas-(i+1)]+"]");
+            }
+            //System.out.print("->");
+            //System.out.println("\n3");
+            for(int j=columnas-(i+2);j>=i;j--){
+                System.out.print("["+mat[filas-(i+1)][j]+"]");
+            }
+            //System.out.print("->");
+            //System.out.println("\n4");
+            for(int j=filas-(i+1);j>i+1;j--){
+                System.out.print("["+mat[j-1][i]+"]");
+            }
+        }
+        }//fin if
+        else if ((float)(columnas%2)==0){
+        for(int i=0;i<(columnas/2)+1;i++){
+            //System.out.println("\n1");
+            for(int j=i;j<columnas-i;j++){
+                System.out.print("["+mat[i][j]+"]");
+            }
+            //System.out.println("\n2");
+            for(int j=i+1;j<filas-i;j++){
+                System.out.print("["+mat[j][columnas-(i+1)]+"]");
+            }
+            //System.out.print("->");
+            //System.out.println("\n3");
+            for(int j=columnas-(i+2);j>=i;j--){
+                System.out.print("["+mat[filas-(i+1)][j]+"]");
+            }
+            //System.out.print("->");
+            //System.out.println("\n4");
+            for(int j=filas-(i+1);j>i+1;j--){
+                System.out.print("["+mat[j-1][i]+"]");
+            }
+        }
+        }
+    }
